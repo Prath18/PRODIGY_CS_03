@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import re
 
 def assess_password_strength(password):
-    # Define criteria
     min_length = 8
     has_uppercase = bool(re.search(r'[A-Z]', password))
     has_lowercase = bool(re.search(r'[a-z]', password))
@@ -57,10 +50,3 @@ result = assess_password_strength(password)
 print(f"Password Strength: {result['password_strength']}")
 for advice in result['feedback']:
     print(advice)
-
-
-# In[ ]:
-
-
-
-
